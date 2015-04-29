@@ -87,7 +87,15 @@
 % ==============================================================================
 \section{Introduktion}\label{setup}
 % ==============================================================================
-% TODO: Allmän introduktion.
+I denna labb skall vi studera en passiv krets uppbyggd av ett motstånd och en
+kondensator. Om en sådan krets matas med en sinusformad insignal kommer den att
+släppa igenom vissa frekvenser medan andra frekvenser dämpas. Ett sådant
+frekvensberoende nät kallas därför ofta för filter. Om kretsen innehåller
+endast en reaktiv (dvs energilagrande) komponent (spole eller kondensator)
+kallar vi kretsen för ett första ordningens filter. Namnet kommer sig av att
+kretsen kan beskrivas med en första ordningens differentialekvation.
+Vi skall analysera kretsen både i frekvensplanet genom att mäta upp ett
+Bode-diagram och i tidsplanet genom att mäta upp kretsens stegsvar.
 
 
 % ==============================================================================
@@ -98,8 +106,17 @@
 
 \subsection{Experimentuppställning}\label{}
 % ------------------------------------------------------------------------------
-En så kallad experimentplatta eller "breadboard"
-används för att konstruera kretsen som illustreras i Figur \ref{fig:1-freqdom_schem}.
+En så kallad experimentplatta eller "breadboard" används för att konstruera
+kretsen som illustreras i Figur \ref{fig:1-freqdom_schem}.
+\par För att generera en sinusformad signal används signalgeneratorn HP33120A,
+vars utgång kopplas genom en BNC-förgrening till oscilloskopet Agilent 54621A
+och genom en BNC- banankontaktadapter, med "banankablar" till
+breadboardplattans skruvterminaler.
+\par Oscilloskopet visar signalen från kretsens ingång, dvs signalgeneratorns
+utgångs, på kanal ett. Kanal två kopplas till kretsens utgång, Punkt A i
+\ref{fig:1-freqdom_schem} med en oscilloskop-prob. Proben ställs till att dämpa
+med en faktor av 10:1 och den vertikala skalan justeras en dekad nedåt, så att
+båda kanalerna visas med samma skalfaktor.
 
 
 \begin{figure}
