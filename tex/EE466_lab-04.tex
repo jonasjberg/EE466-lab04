@@ -1,0 +1,102 @@
+% ==============================================================================
+% LAB 119
+% UNDERSÖKNING AV RC-KRETS
+% ------------------------
+%
+% Author:
+% Jonas Sjöberg     <tel12jsg@student.hig.se>
+% Oscar Wallberg    <tco13owg@student.hig.se>
+%
+% License:
+% Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+% See LICENSE.md for full licensing information.
+% ==============================================================================
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}         % För svensk innehållsförteckning
+\usepackage[swedish]{isodate}
+\usepackage{siunitx}                % (För dokumentation, kör; texdoc siunitx)
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}              % Tables span across pages
+\usepackage{microtype}
+\usepackage{gensymb}
+%\usepackage{tabto}
+\usepackage{units}
+\setlength\parindent{0pt}           % Removes all indentation from paragraphs
+
+\usepackage{rotating}
+\usepackage{wrapfig}
+\usepackage{lscape}
+
+\usepackage[pdfusetitle,
+            bookmarks=true,
+            bookmarksnumbered=true,
+            bookmarksopen=false,
+            breaklinks=false,
+            pdfborder={0 0 0},
+            backref=false,
+            colorlinks=false]{hyperref}
+
+
+\title{EE466 \\ Lab 119 \\ Undersökning av RC-krets}
+
+\author{                                 \\
+  Jonas Sjöberg                          \\
+  860224                                 \\
+  Högskolan i Gävle,                     \\
+  Elektronikingenjörsprogrammet,         \\
+  \texttt{tel12jsg@student.hig.se}       \\
+  \texttt{https://github.com/jonasjberg} \\
+                                         \\
+  Oscar Wallberg                         \\
+  Högskolan i Gävle,                     \\
+  Dataingenjörsprogrammet,               \\
+  \texttt{tco13owg@student.hig.se}       \\
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+    \begin{tabular}{l r}
+        Labb utförd: & TODO: Labben utförd datum \\
+        Instruktör: & Efrain Zenteno
+    \end{tabular}
+\end{center}
+
+\medskip
+
+\begin{abstract}
+    \begin{center}
+        Laborationsrapport för \emph{EE466 -- Elektrisk kretsteori}, Högskolan
+        i Gävle. Syftet med laborationen är att analysera funktionen hos en RC
+        krets.  Laborationen innefattar överföringsfunktionen för en RC-krets,
+        i både tids- och frekvensdomänen. Stegsvaret för en första ordningens
+        krets.  Bode-diagram.  Begreppen brytfrekvens, frekvens- och
+        faskaraktäristik.
+    \end{center}
+\end{abstract}
+
+\newpage
+%\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\newpage
+\input{tex/intro}
+\input{tex/bode}
+\input{tex/stegsvar}
+\input{tex/impedans}
+
+\newpage
+\input{tex/resultat}
+
+
+\end{document}
