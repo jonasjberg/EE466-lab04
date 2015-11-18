@@ -1,10 +1,10 @@
 <Qucs Schematic 0.0.19>
 <Properties>
-  <View=76,71,985,883,0.751315,0,0>
+  <View=76,101,1131,883,1,0,13>
   <Grid=10,10,1>
   <DataSet=uppgift-1_tran.dat>
   <DataDisplay=uppgift-1_tran.dpl>
-  <OpenDisplay=1>
+  <OpenDisplay=0>
   <Script=uppgift-1_tran.m>
   <RunScript=0>
   <showFrame=0>
@@ -18,10 +18,10 @@
 <Components>
   <R R1 1 270 180 -26 15 0 0 "1 kOhm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
   <C C1 1 340 260 17 -26 0 1 "100n" 1 "" 0 "neutral" 0>
-  <Vac V1 1 180 260 18 -26 0 1 "1 V" 1 "1 kHz" 0 "0" 0 "0" 0>
   <GND * 1 180 310 0 0 0 0>
-  <.AC AC1 1 440 160 0 41 0 0 "log" 1 "10 Hz" 1 "10 MHz" 1 "61" 1 "no" 0>
-  <.SW SW1 1 620 160 0 68 0 0 "AC1" 1 "lin" 1 "R1" 1 "10 Ohm" 1 "1 MOhm" 1 "10" 1>
+  <Vac V1 1 180 260 18 -26 0 1 "1 V" 1 "freq" 1 "0" 0 "0" 0>
+  <.SW SW1 1 620 160 0 68 0 0 "TR1" 1 "log" 1 "freq" 1 "10" 1 "100k" 1 "10" 1>
+  <.TR TR1 1 470 160 0 68 0 0 "lin" 1 "0" 1 "2 ms" 1 "2001" 0 "Trapezoidal" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "yes" 0 "0" 0>
 </Components>
 <Wires>
   <180 180 240 180 "" 0 0 0 "">
@@ -36,9 +36,8 @@
   <340 180 340 180 "Vout" 360 140 0 "">
 </Wires>
 <Diagrams>
-  <Rect 179 647 561 294 3 #c0c0c0 1 10 1 10 1 1e+07 1 -0.0998249 0.2 1.09998 1 -1 0.5 1 315 0 225 "" "" "">
-	<"Vin.v" #ff0000 0 3 0 0 0>
-	<"Vout.v" #0000ff 0 3 0 0 0>
+  <Rect 180 638 561 278 3 #c0c0c0 1 00 1 0 0.0002 0.002 1 -1.19998 0.5 1.19997 1 -1 0.5 1 315 0 225 "" "" "">
+	<"Vout.Vt" #ff0000 0 3 0 0 0>
   </Rect>
 </Diagrams>
 <Paintings>
