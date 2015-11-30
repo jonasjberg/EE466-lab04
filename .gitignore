@@ -26,3 +26,8 @@ texput.log
 build/*
 misc/*.pdf
 img/*.pdf
+
+
+### Qucs ###
+sim/ee466_lab-4_prj/*.pdf
+sim/*.pdf

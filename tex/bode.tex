@@ -17,24 +17,28 @@
 \subsection{Experimentuppställning}\label{}
 % ------------------------------------------------------------------------------
 En så kallad experimentplatta eller "breadboard" används för att konstruera
-kretsen som illustreras i Figur \ref{bode-schema}.
-\par För att generera en sinusformad signal används signalgeneratorn HP33120A,
-vars utgång kopplas genom en BNC-förgrening till oscilloskopet Agilent 54621A
-och genom en BNC- banankontaktadapter, med "banankablar" till
+kretsen som illustreras i Figur \ref{fig:rc-schema}.
+\par För att generera en sinusformad signal används signalgeneratorn \texttt{HP33120A},
+vars utgång kopplas genom en BNC-förgrening till oscilloskopet \texttt{Agilent 54621A}
+och genom en BNC- banankontaktadapter, med ``banankablar'' till
 breadboardplattans skruvterminaler.
-\par Oscilloskopet visar signalen från kretsens ingång, dvs signalgeneratorns
-utgångs, på kanal ett. Kanal två kopplas till kretsens utgång, Punkt A i
-\ref{bode-schema} med en oscilloskop-prob. Proben ställs till att dämpa
-med en faktor av 10:1 och den vertikala skalan justeras en dekad nedåt, så att
-båda kanalerna visas med samma skalfaktor.
+\par Oscilloskopets första kanal visar signalen från kretsens ingång, punkten
+\texttt{Vout} i \ref{fig:rc-schema}. Samma punkt utgör signalgeneratorns
+utgång och vid några mätningar användes en T-koppling av BNC-kablar för att 
+mata signalgeneratorns utgång till både experimentkopplingen och oscilloskopet.
+En oscilloskopprob är ansluten till oscilloskopets andra kanal. Proben kopplas
+till kretsens utgång, punkten \texttt{Vout} i \ref{fig:rc-schema} med en
+oscilloskop-prob. Proben ställs till att dämpa med en faktor av 10:1 och den
+vertikala skalan justeras en dekad
+nedåt, så att båda kanalerna visas med samma skalfaktor.
 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\linewidth]{img/1-freqdom_schem}
+    \includegraphics[width=0.8\linewidth]{sim/ee466_lab-4_prj/uppgift-0_schema}
     \caption[Schematisk ritning av labbkoppling, första ordningens RC-filter.]
     {Schematisk ritning av labbkoppling, första ordningens RC-filter.}
-    \label{bode-schema}
+    \label{fig:rc-schema}
 \end{figure}
 
 
@@ -44,55 +48,28 @@ båda kanalerna visas med samma skalfaktor.
 
 \subsection{Simulering}\label{}
 % ------------------------------------------------------------------------------
-%Kretsen simuleras i \texttt{LTSpice} enligt Figur~\ref{fig:sim1}.
-
-%\begin{figure}
-    %\centering
-    %\includegraphics[width=0.6\linewidth]{sim_ltspice/lab4_1.pdf}
-    %\caption[Simulering av labbkopplingen i LTSpice.]
-    %{Simulering av labbkopplingen i LTSpice.}
-    %\label{bode-sim}
-%\end{figure}
-
-%\begin{sidewaysfigure}[ht]
-    %\centering
-    %\includegraphics[\linewidth]{sim_ltspice/lab4_1-acplot.eps}
-    %\caption[Kretsens frekvensåtergivning. Resultat från simulering av
-    %labbkopplingen i LTSpice.]
-    %{Resultat från simulering av labbkopplingen i LTSpice.}
-    %\label{bode-sim}
-%\end{sidewaysfigure}
-
-%\begin{sidewaysfigure}[ht]
-    %\centering
-    %\includegraphics[\linewidth]{sim_ltspice/lab4_1-tranplot.pdf}
-    %\caption[Kretsens transientrespons för olika frekvenser hos V1. Resultat
-%från simulering av labbkopplingen i LTSpice.]
-    %{Resultat från simulering av labbkopplingen i LTSpice.}
-    %\label{bode-sim}
-%\end{sidewaysfigure}
-
-Kretsen simuleras i \texttt{Qucs} enligt Figur~\ref{fig:sim1}.
+Kretsen simuleras i \texttt{Qucs} enligt Figur~\ref{fig:bode-sim-ac},
+Figur~\ref{fig:bode-sim-tran} och Figur~\ref{fig:bode-sim-param}.
 
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_ac}
-    \caption[] {Labbkopplingens frekvensåtergivning.}
-    \label{bode-sim-ac}
+    \caption[] {Simulering av kretsens frekvensåtergivning.}
+    \label{fig:bode-sim-ac}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_tran}
-    \caption[] {Labbkopplingens transientrespons för olika frekvenser för $V_1$.}
-    \label{bode-sim-tran}
+    \caption[] {Simulering av kretsen i tidsdomänen för olika frekvenser av $V_1$.}
+    \label{fig:bode-sim-tran}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_param}
-    \caption[] {Labbkopplingens transientrespons för olika värden av $C_1$.}
-    \label{bode-sim-tran}
+    \caption[] {Simulering av kretsen i tidsdomänen för olika värden av $C_1$.}
+    \label{fig:bode-sim-param}
 \end{figure}
 
 
