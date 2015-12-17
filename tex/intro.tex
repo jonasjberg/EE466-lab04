@@ -26,38 +26,39 @@ lågpassfilter kan konstrueras enligt Figur~\ref{fig:rc-schema}.
 
 \section{Lågpassfilter}
 \subsection{Överföringsfunktion}
-\begin{equation}\label{eq:transfer}
+Uttryck \eqref{eq:transfer} beskriver lågpassfiltrets överföringsfunktion i
+Bodes normalform.
+\begin{equation*}
     \begin{split}
         H(j\omega) &= \dfrac{U_{ut}}{U_{in}}                                      \\
                    &= \dfrac{\dfrac{1}{\jmath\omega C}}{R + \dfrac{1}{j\omega C}} \\
                    &= \dfrac{1}{1+\jmath\omega R C}                               \\
     \end{split}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation}\label{eq:transfer}
     H(j\omega) = \dfrac{1}{1+j(\omega/\omega_1)}
 \end{equation}
 
-där $\omega_1 = \tfrac{1}{R C}$ är brytfrekvensen uttryckt som vinkelfrekvens
-$\si{\radian\per\second}$.
+där $\omega_1 = \tfrac{1}{R C}$ är brytfrekvensen uttryckt som en
+vinkelfrekvens $\si{\radian\per\second}$.
 
 
 \par Eftersom $\omega = 2 \pi f$ kan vi också uttrycka överföringsfunktionen som:
 
-\begin{equation}\label{eq:transfer2}
+\begin{equation*}
     \begin{split}
         H(f) &= \dfrac{U_{ut}}{U_{in}}        \\
-             &= \dfrac{1}{1+\jmath 2 \pi R C} \\
+        H(f) &= \dfrac{1}{1+\jmath 2 \pi R C} \\
     \end{split}
+\end{equation*}
+
+\begin{equation}\label{eq:transfer2}
+    H(f) = \dfrac{1}{1+\jmath (\dfrac{f}{f_1})}\ \text{där}\ f_1 = \dfrac{1}{2 \pi R C} \si{\Hz}
 \end{equation}
 
-\begin{equation}
-    H(f) = \dfrac{1}{1+\jmath (\dfrac{f}{f_1})}
-\end{equation}
 
-där $f_1 = \dfrac{1}{2 \pi R C} \si{\Hz}$.
-
-\par Den senare formen i \eqref{eq:transfer2} är att föredra när man plottar
+\par Den senare formen \eqref{eq:transfer2} är att föredra när man plottar
 upp överföringsfunktionen från mätresultatet och är den form vi använder i
 labben.
 
@@ -66,11 +67,11 @@ Eftersom överföringsfunktionen är på komplex form har den både absolutbelop
 \begin{equation}
     \begin{split}
         |H(f)| &= \dfrac{1}{\sqrt{1+(\frac{f}{f_1})^2}} \\
-          ArgH = -\arctan{\frac{f}{f_1}}
+          ArgH &= -\arctan{\frac{f}{f_1}}
     \end{split}
 \end{equation}
 
 
-$z = 1.19 \phase{-78.2039^{\circ}}$
+%$z = 1.19 \phase{-78.2039^{\circ}}$
 
 
