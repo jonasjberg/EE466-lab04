@@ -28,33 +28,36 @@ lågpassfilter kan konstrueras enligt Figur~\ref{fig:rc-schema}.
 \subsection{Överföringsfunktion}
 Uttryck \eqref{eq:transfer} beskriver lågpassfiltrets överföringsfunktion i
 Bodes normalform.
+
 \begin{equation*}
-    \begin{split}
-        H(j\omega) &= \dfrac{U_{ut}}{U_{in}}                                      \\
-                   &= \dfrac{\dfrac{1}{\jmath\omega C}}{R + \dfrac{1}{j\omega C}} \\
-                   &= \dfrac{1}{1+\jmath\omega R C}                               \\
-    \end{split}
+  \begin{split}
+    H(j\omega) &= \dfrac{U_{ut}}{U_{in}}                                      \\
+               &= \dfrac{\dfrac{1}{\jmath\omega C}}{R + \dfrac{1}{j\omega C}} \\
+               &= \dfrac{1}{1+\jmath\omega R C}                               \\
+  \end{split}
 \end{equation*}
 
 \begin{equation}\label{eq:transfer}
-    H(j\omega) = \dfrac{1}{1+j(\omega/\omega_1)}
+  H(j\omega) = \dfrac{1}{1+j(\omega/\omega_1)}
 \end{equation}
 
 där $\omega_1 = \tfrac{1}{R C}$ är brytfrekvensen uttryckt som en
 vinkelfrekvens $\si{\radian\per\second}$.
 
 
-\par Eftersom $\omega = 2 \pi f$ kan vi också uttrycka överföringsfunktionen som:
+\par 
+Eftersom $\omega = 2 \pi f$ kan vi också uttrycka överföringsfunktionen som:
 
 \begin{equation*}
-    \begin{split}
-        H(f) &= \dfrac{U_{ut}}{U_{in}}        \\
-        H(f) &= \dfrac{1}{1+\jmath 2 \pi R C} \\
-    \end{split}
+  \begin{split}
+    H(f) &= \dfrac{U_{ut}}{U_{in}}        \\
+    H(f) &= \dfrac{1}{1+\jmath 2 \pi R C} \\
+  \end{split}
 \end{equation*}
 
 \begin{equation}\label{eq:transfer2}
-    H(f) = \dfrac{1}{1+\jmath (\dfrac{f}{f_1})}\ \text{där}\ f_1 = \dfrac{1}{2 \pi R C} \si{\Hz}
+  H(f) = \dfrac{1}{1+\jmath (\dfrac{f}{f_1})}\
+  \text{där}\ f_1 = \dfrac{1}{2 \pi R C} \si{\Hz}
 \end{equation}
 
 
@@ -62,13 +65,14 @@ vinkelfrekvens $\si{\radian\per\second}$.
 upp överföringsfunktionen från mätresultatet och är den form vi använder i
 labben.
 
-Eftersom överföringsfunktionen är på komplex form har den både absolutbelopp och fasvinkel:
+Eftersom överföringsfunktionen är på komplex form har den både absolutbelopp
+och fasvinkel \eqref{eq:complexform}:
 
-\begin{equation}
-    \begin{split}
-        |H(f)| &= \dfrac{1}{\sqrt{1+(\frac{f}{f_1})^2}} \\
-          ArgH &= -\arctan{\frac{f}{f_1}}
-    \end{split}
+\begin{equation}\label{eq:complexform}
+  \begin{split}
+    |H(f)| &= \dfrac{1}{\sqrt{1+(\frac{f}{f_1})^2}} \\
+      ArgH &= -\arctan{\frac{f}{f_1}}
+  \end{split}
 \end{equation}
 
 
