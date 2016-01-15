@@ -33,20 +33,43 @@ båda kanalerna visas med samma skalfaktor.
 \par Impedansskillnaden mellan signalgenerator kabel mot 
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\linewidth]{sim/ee466_lab-4_prj/uppgift-0_schema}
-    \caption[Schematisk ritning av labbkoppling, första ordningens RC-filter.]
-    {Schematisk ritning av labbkoppling, första ordningens RC-filter.}
-    \label{fig:rc-schema}
+\begin{figure}\label{fig:rc-schema}
+  \centering
+  \includegraphics[width=0.8\linewidth]{sim/ee466_lab-4_prj/uppgift-0_schema}
+  \caption[Schematisk ritning av labbkoppling, första ordningens RC-filter.]
+  {Schematisk ritning av labbkoppling, första ordningens RC-filter.}
 \end{figure}
 
 
-\subsection{Mätresultat}\label{}
+\subsection{Beräkning}
+% ------------------------------------------------------------------------------
+Brytfrekvensen $f_1$ beräknas från \eqref{eq:transfer2} enligt:
+
+\begin{equation}\label{eq:cutoff}
+  f_1 = \dfrac{1}{2 \pi R C} \si{\Hz}
+\end{equation}
+
+För kopplingen med komponentvärden enligt Figur~\ref{fig:rc-schema} beräknas
+brytfrekvensen $f_1$ enligt \eqref{eq:cutoff2}:
+
+\begin{equation}\label{eq:cutoff2}
+  \begin{split}
+    f_1 &= \dfrac{1}{2 \pi \times \SI{1}{\kohm} \times \SI{100}{\nano\farad}} \si{\Hz} \\
+        &= \dfrac{1}{2 \pi \times \num{1e3} \times \num{100e-6}}                       \\
+        &= \dfrac{10^6}{2 \pi \times 10^3 \times \num{100}}                            \\
+    f_1 &= \SI{1.591549431}{\Hz}
+  \end{split}
+\end{equation}
+
+Brytfrekvensen för kopplingen i Figur~\ref{fig:rc-schema} är alltså
+$\SI{1.592}{\Hz}$, det är den frekvens då signalen har dämpats med \SI{6}{\dB}.
+
+
+\subsection{Mätresultat}
 % ------------------------------------------------------------------------------
 % TODO:
 
-\subsection{Simulering}\label{}
+\subsection{Simulering}
 % ------------------------------------------------------------------------------
 För verifiering och visualisering av den teoretiska beräkningen körs en
 \texttt{SPICE}-simulering av kretsen i det GPL-licensierade open source
@@ -55,25 +78,22 @@ Simuleringsuppställningen och resultatet återfinns i
 Figurer~\ref{fig:bode-sim-ac}, Figur~\ref{fig:bode-sim-tran} och
 Figur~\ref{fig:bode-sim-param}.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_ac}
-    \caption[] {Simulering av kretsens frekvensåtergivning.}
-    \label{fig:bode-sim-ac}
+\begin{figure}\label{fig:bode-sim-ac}
+  \centering
+  \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_ac}
+  \caption[] {Simulering av kretsens frekvensåtergivning.}
 \end{figure}
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_tran}
-    \caption[] {Simulering av kretsen i tidsdomänen för olika frekvenser av $V_1$.}
-    \label{fig:bode-sim-tran}
+\begin{figure}[ht]\label{fig:bode-sim-tran}
+  \centering
+  \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_tran}
+  \caption[] {Simulering av kretsen i tidsdomänen för olika frekvenser av $V_1$.}
 \end{figure}
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_param}
-    \caption[] {Simulering av kretsen i tidsdomänen för olika värden av $C_1$.}
-    \label{fig:bode-sim-param}
+\begin{figure}[ht]\label{fig:bode-sim-param}
+  \centering
+  \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-1_param}
+  \caption[] {Simulering av kretsen i tidsdomänen för olika värden av $C_1$.}
 \end{figure}
 
 
