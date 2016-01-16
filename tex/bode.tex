@@ -44,7 +44,7 @@ båda kanalerna visas med samma skalfaktor.
 \subsection{Beräkning}
 % ------------------------------------------------------------------------------
 Brytfrekvensen $f_1$ defineras som den frekvens då signalen har dämpats med
-\SI{6}{\dB} och beräknas från ekv.~\eqref{eq:transfer2} enligt:
+\SI{3}{\dB} och beräknas från ekv.~\eqref{eq:transfer2} enligt:
 
 \begin{equation}\label{eq:cutoff}
   f_1 = \dfrac{1}{2 \pi R C} \si{\Hz}
@@ -62,7 +62,9 @@ brytfrekvensen $f_1$ enligt ekv.~\eqref{eq:cutoff2}:
   \end{split}
 \end{equation}
 
-Vilket ger svaret i \eqref{eq:cutoff3}:
+Vilket ger svaret i \eqref{eq:cutoff3}; signalen dämpas med \SI{3}{\dB} vid
+filtrets brytfrekvens $f_1 \approx \SI{1.592}{\Hz}$, varvid den ``rullas av''
+med \SI{20}{\dB} per dekad (faktor av 10). 
 
 \begin{equation}\label{eq:cutoff3}
   \begin{split}
@@ -100,6 +102,10 @@ Vilket ger svaret i \eqref{eq:cutoff3}:
   \caption[]{Mätresultat för kretsen i Figur~\ref{fig:rc-schema}.}
   \label{8a-table}
 \end{longtable}
+
+% TODO: Bode-diagram för frekvensgång.
+
+% TODO: Bode-diagram för Fasförskjutning.
 
 \subsection{Simulering}
 % ------------------------------------------------------------------------------
