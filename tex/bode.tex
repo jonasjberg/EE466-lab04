@@ -30,7 +30,9 @@ kanal. Proben kopplas till kretsens utgång, punkten \texttt{Vout} i
 Figur~\ref{fig:rc-schema} med en oscilloskop-prob. Proben ställs till att dämpa
 med en faktor av 10:1 och den vertikala skalan justeras en dekad nedåt, så att
 båda kanalerna visas med samma skalfaktor.
-\par Impedansskillnaden mellan signalgenerator kabel mot 
+\par Impedansskillnaden mellan signalgenerator, kablage och mätutrustning antas
+vara hög nog för att inte ha någon avgörande inverkan på mätresultaten. Denna
+aspeketen återkommer i Sektion~\ref{impedans}
 
 
 \begin{figure}\label{fig:rc-schema}
@@ -55,9 +57,9 @@ brytfrekvensen $f_1$ enligt ekv.~\eqref{eq:cutoff2}:
 
 \begin{equation}\label{eq:cutoff2}
   \begin{split}
-    f_1 &= \dfrac{1}{2    \pi \times \SI{1}{\kohm} \times \SI{100}{\nano\farad}} \si{\Hz} \\
-        &= \dfrac{1}{2    \pi \times \num{1e3} \times \num{100e-6}}                       \\
-        &= \dfrac{10^6}{2 \pi \times 10^3 \times \num{100}}                               \\
+    f_1 &= \dfrac{1}{2 \pi \times \SI{1}{\kohm} \times \SI{100}{\nano\farad}} \si{\Hz} \\
+        &= \dfrac{1}{2 \pi \times \num{1e3} \times \num{100e-6}}                       \\
+        &= \dfrac{10^6}{2 \pi \times 10^3 \times \num{100}}                            \\
     f_1 &= \SI{1.591549431}{\Hz}
   \end{split}
 \end{equation}
@@ -76,8 +78,8 @@ med \SI{20}{\dB} per dekad (faktor av 10).
 
 \subsection{Mätresultat}
 % ------------------------------------------------------------------------------
-% TODO: Lägg till faktiska mätresultat.
 
+% TODO: Lägg till faktiska mätresultat i tabellen.
 \begin{longtable}[c]{@{}ccccc@{}}
   \toprule\addlinespace
     \begin{tabular}{cc}$\text{Frekvens}        \\ (\si{\hertz})$   \end{tabular}
@@ -88,24 +90,27 @@ med \SI{20}{\dB} per dekad (faktor av 10).
   \\\addlinespace
   \midrule\endhead
    100 & 2.11 & 1.01 & 5   \\\addlinespace
-   300 & 2.06 & 0.99 & 10  \\\addlinespace
-   500 & 2    & 0.96 & 17  \\\addlinespace
-   700 & 1.94 & 0.93 & 24  \\\addlinespace
-   900 & 1.84 & 0.88 & 29  \\\addlinespace
-  1100 & 1.75 & 0.84 & 33  \\\addlinespace
-  1300 & 1.66 & 0.79 & 37  \\\addlinespace
-  1500 & 1.56 & 0.75 & 42  \\\addlinespace
-  1700 & 1.49 & 0.71 & 45  \\\addlinespace
-  1900 & 1.39 & 0.67 & 49  \\\addlinespace
+   200 & 2.06 & 0.99 & 10  \\\addlinespace
+   300 & 2    & 0.96 & 17  \\\addlinespace
+   500 & 1.94 & 0.93 & 24  \\\addlinespace
+   700 & 1.84 & 0.88 & 29  \\\addlinespace
+  1000 & 1.75 & 0.84 & 33  \\\addlinespace
+  1200 & 1.66 & 0.79 & 37  \\\addlinespace
+  1300 & 1.56 & 0.75 & 42  \\\addlinespace
+  1500 & 1.49 & 0.71 & 45  \\\addlinespace
+  1700 & 1.39 & 0.67 & 49  \\\addlinespace
+  2000 & 1.39 & 0.67 & 49  \\\addlinespace
   \bottomrule
   \addlinespace
   \caption[]{Mätresultat för kretsen i Figur~\ref{fig:rc-schema}.}
   \label{8a-table}
 \end{longtable}
 
+
 % TODO: Bode-diagram för frekvensgång.
 
 % TODO: Bode-diagram för Fasförskjutning.
+
 
 \subsection{Simulering}
 % ------------------------------------------------------------------------------

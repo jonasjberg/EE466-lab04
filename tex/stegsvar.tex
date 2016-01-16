@@ -15,16 +15,23 @@
 \section{Uppmätning av stegsvaret}\label{step}
 % ------------------------------------------------------------------------------
 Stegsvaret mäts genom att kretsen matas med en fyrkantsvåg med en periodtid som
-är tillräckligt lång för att utsignalen $V_out$ i Figur~\ref{fig:rc-schema} ska 
-hinna uppnå sitt slutvärde för varje halvperiod.
+är tillräckligt lång för att utsignalen ($V_{out}$ i Figur~\ref{fig:rc-schema})
+ska hinna uppnå sitt slutvärde för varje halvperiod.
 
 % TODO: Graf för typiskt exponentiellt stegsvar.
 
-$\tau = RC$
+Kretsens tidskonstant $\tau = RC$
+
 
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
-% TODO:
+% TODO: Lägg till faktiska mätresultat för tidskonstant.
+\begin{equation}
+  \begin{split}
+    \text{Uppmätt värde på } $\tau &= 1$             \\
+    \text{Vilket ger } $f_1        &= 1 \si{\hertz}$ \\
+  \end{split}
+\end{equation}
 
 
 \subsection{Simulering}\label{}
@@ -38,10 +45,10 @@ spänningen vid punkten \texttt{Vout} som en funktion av tid.
 
 Figur~\ref{fig:step-sim-param} visar samma skeende då värdet av $C_1$ sätts
 till några av vanligt förekommande värden (standardiserade i \texttt{IEC
-60063:1963}) genom en ''\emph{parameter sweep}``.  \par 
+60063:1963}) genom en ''\emph{parameter sweep}``.  \par
 Värden av $C_1$: \SI{10}{\nano\farad},  \SI{100}{\nano\farad},
-                 \SI{220}{\nano\farad}, \SI{470}{\nano\farad}, 
-                 \SI{1}{\micro\farad},  \SI{2.2}{\micro\farad} 
+                 \SI{220}{\nano\farad}, \SI{470}{\nano\farad},
+                 \SI{1}{\micro\farad},  \SI{2.2}{\micro\farad}
              och \SI{4.7}{\micro\farad}.
 
 
@@ -60,5 +67,6 @@ Värden av $C_1$: \SI{10}{\nano\farad},  \SI{100}{\nano\farad},
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
-% TODO:
+% TODO: Hur stämmer deta uppmätta värdet av tidskonstanten med det beräknade
+%       värdet och med det som erhölls ur Bode-diagrammet? 
 
