@@ -42,8 +42,32 @@ vara hög nog för att inte ha någon avgörande inverkan på mätresultaten. De
   {Schematisk ritning av labbkoppling, första ordningens RC-filter.}
 \end{figure}
 
+De värden som presenteras i rapporten uppmättes med ett analogt 2-kanals
+oscilloskop \texttt{Hitachi V-252} med en bandbredd på \SI{20}{\MHz}.  Signalen
+genererades av en hemmabyggd egendesignad signalgenerator.  Kopplingsscheman
+till signalgeneratorn återfinns i Figur~\ref{fig:siggen-schem-1} och
+Figur~\ref{fig:siggen-schem-2} i Sektion~\ref{appendix}).
+Stabiliteten och precisionen hos signalgeneratorn lämnar en del att önska,
+kontrollerna är väldigt känsliga och oscilloskopet har ingen frekvensräknare
+eller någon direkt visning av amplituden.
+likaså är oscilloskopet inte särskilt lättanvänt. Avläsning måste ske
+``manuellt'' genom att divisionerna på oscilloskopskärmen räknas och
+multipliceras med vald tidbas eller vertikal förstärkning.
+
 För de faktiska mätningarna användes en hemmabyggd signalgenerator (se
-Figur~\ref{fig:siggen-sch} i Sektion~\ref{appendix})
+Figur~\ref{fig:siggen-schem-1} och Figur~\ref{fig:siggen-schem-2} i
+Sektion~\ref{appendix}).
+\par Signalgeneratorns amplitud ställs till $1 V_{pp}$. Oscilloskopet som aprecision används en \texttt{Flluke 8600A} Multimeter för att mäta amplituden
+som då utrycks i RMS. Sambandet mellan ``topp-till-topp''-värdet och RMS-värdet
+utrycks i ekv.~\eqref{eq:amp-rms}:
+
+\begin{equation}\label{eq:amp-rms}
+  \begin{split}
+    $U_{RMS}      &= \dfrac{\nicefrac{V_{pp}}{2}}{\sqrt{2}}  \\
+    $U_{in}_{RMS} &= \dfrac{1}{\sqrt{2}} = \SI{0.354}{\volt} \\
+  \end{split}
+\end{equation}
+
 
 
 \subsection{Beräkning}
@@ -82,35 +106,6 @@ med \SI{20}{\dB} per dekad (frekvenshöjning med en faktor av 10).
 \subsection{Mätresultat}
 % ------------------------------------------------------------------------------
 
-Signalgeneratorns amplitud ställs till $1 V_{pp}$. För ytterligare precision
-används en \texttt{Flluke 8600A} Multimeter för att mäta amplituden som då
-utrycks i RMS. Sambandet mellan ``topp-till-topp''-värdet och RMS-värdet utrycks
-i ekv.~\eqref{eq:amp-rms}:
-
-%\begin{equation}\label{eq:amp-peak}
-%  $U_{in} = 1 V_{pp}$
-%\end{equation}
-
-\begin{equation}\label{eq:amp-rms}
-  \begin{split}
-    $U_{RMS}      &= \dfrac{\nicefrac{V_{pp}}{2}}{\sqrt{2}}  \\
-    $U_{in}_{RMS} &= \dfrac{1}{\sqrt{2}} = \SI{0.354}{\volt} \\
-  \end{split}
-\end{equation}
-
-% Anmärkningsvärt är förhållandet mellan de tre storheterna, $\nicefrac{V_{pp}}{2}$,
-% $V_{AC}$ RMS och $V_{pp}$ i Ekvation \ref{eq:rms-eq2}. RMS-värdet förhåller sig
-% till peak-värdet med en ratio av $\frac{1}{\sqrt{2}} \approx 0.707106 \ldots$
-% 
-% \begin{align}\label{eq:rms-eq2}
-%     %\begin{split}
-%     \nicefrac{V_{pp}}{2} &= \frac{V_{pp}}{2}\\
-%     V_{AC}\text{ RMS} &= \frac{V_{pp}}{2} \times \frac{1}{\sqrt{2}}\\
-%     V_{pp} &= 2 \times (\nicefrac{V_{pp}}{2})
-%     %\end{split}
-% \end{align}
-
-% TODO: Lägg till faktiska mätresultat i tabellen.
 \begin{longtable}[c]{@{}ccccc@{}}
   \toprule\addlinespace
     \begin{tabular}{cc}$\text{Frekvens}        \\ (\si{\hertz})$   \end{tabular}
@@ -134,54 +129,11 @@ i ekv.~\eqref{eq:amp-rms}:
   1800 & 0.936 & 0.936 & \SI{-574.5}{\milli} & -48  \\\addlinespace % 35uS
   1900 & 0.934 & 0.934 & \SI{-593.1}{\milli} & -50  \\\addlinespace % 35uS
   2000 & 0.932 & 0.932 & \SI{-611.7}{\milli} & -51  \\\addlinespace % ????
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   \bottomrule
   \addlinespace
   \caption[]{Mätresultat för kretsen i Figur~\ref{fig:rc-schema}.}
-  \label{8a-table}
+  \label{bode-table}
 \end{longtable}
-
-%\begin{longtable}[c]{@{}ccccc@{}}
-  %\toprule\addlinespace
-    %\begin{tabular}{cc}$\text{Frekvens}        \\ (\si{\hertz})$   \end{tabular}
-  %& \begin{tabular}{cc}$U_{ut}                 \\ (\si{\volt})$    \end{tabular}
-  %& \begin{tabular}{cc}$U_{ut}/U_{in}          \\ (\si{\volt})$    \end{tabular}
-  %& \begin{tabular}{cc}$20 \log{U_{ut}/U_{in}} \\ (\si{\dB})$      \end{tabular}
-  %& \begin{tabular}{cc}$\phi                   \\ \text{(grader)}$ \end{tabular}
-  %\\\addlinespace
-  %\midrule\endhead
-   %100 & 1.004 & 0.00 & \SI{-17}{\milli}   & -3.6 \\\addlinespace 
-   %200 & 0.998 & 0.00 & \SI{-68m}{\milli}  & -7.2 \\\addlinespace 
-   %300 & 0.997 & 0.00 & \SI{-155m}{\milli} & -10  \\\addlinespace % 1mS
-   %500 & 0.990 & 0.00 & \SI{-411m}{\milli} & -17  \\\addlinespace % 0.1mS   ???
-   %700 & 0.984 & 0.00 & \SI{-770m}{\milli} & -23  \\\addlinespace % 0.15mS  ???
-  %1000 & 0.958 & 0.00 & \SI{-1.46}{\milli} & -32  \\\addlinespace % 0.1mS   ???
-  %1200 & 0.952 & 0.00 & \SI{-1.97}{\milli} & -37  \\\addlinespace % 60uS
-  %1300 & 0.949 & 0.00 & \SI{-2.24}{\milli} & -39  \\\addlinespace % ????
-  %1500 & 0.943 & 0.00 & \SI{-2.77}{\milli} & -43  \\\addlinespace % 40uS
-  %1600 & 0.940 & 0.00 & \SI{-3.03}{\milli} & -45  \\\addlinespace % 35uS
-  %1700 & 0.938 & 0.00 & \SI{-3.30}{\milli} & -47  \\\addlinespace % ?????
-  %1800 & 0.936 & 0.00 & \SI{-3.59}{\milli} & -48  \\\addlinespace % 35uS
-  %1900 & 0.934 & 0.00 & \SI{-3.86}{\milli} & -50  \\\addlinespace % 35uS
-  %2000 & 0.932 & 0.00 & \SI{-4.12}{\milli} & -51  \\\addlinespace % ????
-  %\bottomrule
-  %\addlinespace
-  %\caption[]{Mätresultat för kretsen i Figur~\ref{fig:rc-schema}.}
-  %\label{8a-table}
-%\end{longtable}
 
 
 % TODO: Bode-diagram för frekvensgång.
