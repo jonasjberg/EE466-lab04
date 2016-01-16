@@ -27,13 +27,16 @@
 % Vi kan undersöka detta genom att ansluta motstånd på in- och utgången av
 % kretsen.
 
-\subsection{Inverkan av källimpedansen}\label{Zin}
+\section{Inverkan av källimpedansen}\label{Zin}
 % ------------------------------------------------------------------------------
 % För att se hur kretsen uppför sig om vi ansluter den till en signalgenerator
 % med utimpedansen 1k (dvs egentligen 1k + 50) kopplar vi upp följande krets:
 
 % TODO: Lägg till Kopplingsschema
 
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
 % TODO: Mät upp Bode-diagrammet för kretsen och jämför med tidigare fall, 
 %       vi nöjer oss med amplituddiagrammet i denna mätning. 
 %       Notera brytfrekvensen. 
@@ -73,13 +76,16 @@ $U_{in} = 1 \si{\volt}$
 % TODO: Hur påverkas amplituden och brytfrekvensen av källimpedansen? 
 
 
-\subsection{Inverkan av belastningsimpedansen}\label{Zut}
+\section{Inverkan av belastningsimpedansen}\label{Zut}
 % ------------------------------------------------------------------------------
 % För att undersöka hur kretsen påverkas av en belastning på 1k kopplar vi upp
 % följande:
 
 % TODO: Lägg till Kopplingsschema
-% 
+
+
+\subsection{Mätresultat}\label{}
+% ------------------------------------------------------------------------------
 % TODO: Mät upp amplituddiagrammet och notera brytfrekvensen.
 
 % TODO: Lägg till signalgeneratorns amplitud vid mätning.
@@ -107,7 +113,7 @@ $U_{in} = 1 \si{\volt}$
   2000 & 1.39 & 0.67 & 49  \\\addlinespace
   \bottomrule
   \addlinespace
-  \caption[]{Mätresultat för kretsen i Figur~\ref{fig:rc-schema}.}
+  \caption[]{Mätresultat för Inverkan av belastningsimpedansen för kretsen i Figur~\ref{fig:rc-schema}.}
   \label{8a-table}
 \end{longtable}
 
@@ -118,19 +124,19 @@ $U_{in} = 1 \si{\volt}$
 %       Förklara vad som händer!
 
 
-\subsection{Mätresultat}\label{}
-% ------------------------------------------------------------------------------
-% TODO:
-
 
 \subsection{Simulering}\label{}
 % ------------------------------------------------------------------------------
-Kretsen simuleras i \texttt{Qucs} enligt Figur~\ref{fig:Zin-step}.
+Kretsen simuleras i \texttt{Qucs} enligt Figur~\ref{fig:Zin-step} och
+Figur~\ref{fig:Zout-step}.
 
-Figur~\ref{fig:Zin-step} visar kretsens frekvensrespons då värdet av $R_i$ sveps mellan
-$\SI{50}{\ohm}$ och $\SI{10}{\kohm}$ i 20 steg om $\SI{523.684}{\ohm}$.
+Källimpedansens påverkar på kretsen kan ses i Figur~\ref{fig:Zin-step} som
+visar kretsens frekvensrespons då värdet av $R_i$ sveps mellan $\SI{50}{\ohm}$
+och $\SI{10}{\kohm}$ i $20$ steg om $\SI{523.684}{\ohm}$.
 
-%Figur~\ref{fig:Zut-step} visar kretsens frekvensrespons för olika värden av $R_o$.
+Påverkan från belastningsimpedansen ses i Figur~\ref{fig:Zout-step} som visar
+kretsens frekvensrespons då värdet av $R_o$ sveps mellan $\SI{100}{\ohm}$ och
+$\SI{1}{\mega\ohm}$ i $101$ steg om $\SI{9.999}{\kohm}$.
 
 
 \begin{figure}[ht]\label{fig:Zin-step}
@@ -139,7 +145,11 @@ $\SI{50}{\ohm}$ och $\SI{10}{\kohm}$ i 20 steg om $\SI{523.684}{\ohm}$.
   \caption[] {Simulering av kretsens frekvensrespons för olika värden av $R_i$.}
 \end{figure}
 
-% TODO: Simulering av belastningsimpedans.
+\begin{figure}[ht]\label{fig:Zout-step}
+  \centering
+  \includegraphics[width=\linewidth]{sim/ee466_lab-4_prj/uppgift-3_Zout_step}
+  \caption[] {Simulering av kretsens frekvensrespons för olika värden av $R_o$.}
+\end{figure}
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
