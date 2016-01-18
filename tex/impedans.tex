@@ -16,6 +16,20 @@
 % Hittills har vi inte tagit hänsyn till hur signalgeneratorns och oscilloskopets
 % impedanser kan påverka funktionen hos vår krets. Ett mera fullständigt schema
 % över vår uppkoppling ser ut så här:
+Tidigare har vi antagit att signalgeneratorn, oscilloskopet och multimetern 
+inte har påverkat kretsen. Signalgeneratorn antas då ha en väldigt låg utimpedans
+vilket i idealfallet skulle innebära att signalgeneratorn skulle kunna driva 
+vad som än kopplades till utgången, till och med en direkt kortslutning (med
+en oändligt stor ström genom lasten till följd). På samma vis antas ett idealt
+mätinstrument inte ha någon som helst inverkan på kretsen det ansluts till.
+Instrumentet har en oändligt hög ingångsimpedans ($Z_{mätinstrument} \to
+\infty$) vilket innebär att ingen ström flyter in i instrumentet och kretsen
+påverkas således inte.
+
+\par I själva verket har både signalgeneratorn och mätinstrumenten impedanser
+som bör tas i beaktning. Även koaxial-kablar har en viss impedans, vanligtvis
+\SI{50}{\ohm}. Experimentuppställningen och komponenternas icke-ideala
+karaktäristik blir allt viktigare
 % 
 % Om vi betraktar kondensatorn som kortsluten för höga frekvenser och som helt
 % öppen för låga frekvenser så inser vi lätt att inimpedansen för RC-filtret Zin
