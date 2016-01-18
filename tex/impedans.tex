@@ -16,9 +16,9 @@
 % Hittills har vi inte tagit hänsyn till hur signalgeneratorns och oscilloskopets
 % impedanser kan påverka funktionen hos vår krets. Ett mera fullständigt schema
 % över vår uppkoppling ser ut så här:
-Tidigare har vi antagit att signalgeneratorn, oscilloskopet och multimetern 
+Tidigare har vi antagit att signalgeneratorn, oscilloskopet och multimetern
 inte har påverkat kretsen. Signalgeneratorn antas då ha en väldigt låg utimpedans
-vilket i idealfallet skulle innebära att signalgeneratorn skulle kunna driva 
+vilket i idealfallet skulle innebära att signalgeneratorn skulle kunna driva
 vad som än kopplades till utgången, till och med en direkt kortslutning (med
 en oändligt stor ström genom lasten till följd). På samma vis antas ett idealt
 mätinstrument inte ha någon som helst inverkan på kretsen det ansluts till.
@@ -30,7 +30,7 @@ påverkas således inte.
 som bör tas i beaktning. Även koaxial-kablar har en viss impedans, vanligtvis
 \SI{50}{\ohm}. Experimentuppställningen och komponenternas icke-ideala
 karaktäristik blir allt viktigare
-% 
+
 % Om vi betraktar kondensatorn som kortsluten för höga frekvenser och som helt
 % öppen för låga frekvenser så inser vi lätt att inimpedansen för RC-filtret Zin
 % 1k och utimpedansen Zut 1k. Det är alltså rimligt att anta att varken
@@ -39,6 +39,7 @@ karaktäristik blir allt viktigare
 % belastningsimpedanser i samma storleksordning som RC-kretsens egna impedanser?
 % Vi kan undersöka detta genom att ansluta motstånd på in- och utgången av
 % kretsen.
+
 
 \section{Inverkan av källimpedansen}\label{Zin}
 % ------------------------------------------------------------------------------
@@ -50,9 +51,9 @@ karaktäristik blir allt viktigare
 
 \subsection{Mätresultat}\label{}
 % ------------------------------------------------------------------------------
-% TODO: Mät upp Bode-diagrammet för kretsen och jämför med tidigare fall, 
-%       vi nöjer oss med amplituddiagrammet i denna mätning. 
-%       Notera brytfrekvensen. 
+% TODO: Mät upp Bode-diagrammet för kretsen och jämför med tidigare fall,
+%       vi nöjer oss med amplituddiagrammet i denna mätning.
+%       Notera brytfrekvensen.
 %       Uin är den "nya" funktionsgeneratorns utspänning utan belastning.
 
 % TODO: Lägg till signalgeneratorns amplitud vid mätning.
@@ -86,7 +87,7 @@ $U_{in} = 1 \si{\volt}$
 
 % TODO: Bode-diagram för frekvensgång (amplitud vs frekvens).
 
-% TODO: Hur påverkas amplituden och brytfrekvensen av källimpedansen? 
+% TODO: Hur påverkas amplituden och brytfrekvensen av källimpedansen?
 
 
 \section{Inverkan av belastningsimpedansen}\label{Zut}
@@ -133,9 +134,8 @@ $U_{in} = 1 \si{\volt}$
 
 % TODO: Bode-diagram för frekvensgång (amplitud vs frekvens).
 
-% TODO: Hur påverkas amplituden och brytfrekvensen av belastningsimpedansen? 
+% TODO: Hur påverkas amplituden och brytfrekvensen av belastningsimpedansen?
 %       Förklara vad som händer!
-
 
 
 \subsection{Simulering}\label{}
@@ -164,8 +164,15 @@ $\SI{1}{\mega\ohm}$ i $101$ steg om $\SI{9.999}{\kohm}$.
   \caption[] {Simulering av kretsens frekvensrespons för olika värden av $R_o$.}
 \end{figure}
 
+
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
-% TODO:
+Då mätinstrumentet effektivt kopplas parallellt med kretsen under test märks
+större skillnad i påverkan mellan lägre instrumentimpedanser. Så länge
+instrumentimpedansen är ``hög nog'' så gör en ytterligare ökning inte någon
+större skillnad för huruvida kretsen påverkas av lasten. En tumregel om 10
+gånger större lastimpedans än källimpedans för ``god nog'' påverkan brukar vara
+användbar i de flesta praktiska sammanhang, särskilt då vid låga frekvenser.
+
 
 
