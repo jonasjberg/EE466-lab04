@@ -34,7 +34,6 @@ båda kanalerna visas med samma skalfaktor.
 vara hög nog för att inte ha någon avgörande inverkan på mätresultaten. Detta
 återkommer i Sektion~\ref{impedans}.
 
-
 \begin{figure}\label{fig:rc-schema}
   \centering
   \includegraphics[width=0.8\linewidth]{sim/ee466_lab-4_prj/uppgift-0_schema}
@@ -54,10 +53,11 @@ likaså är oscilloskopet inte särskilt lättanvänt. Avläsning måste ske
 ``manuellt'' genom att divisionerna på oscilloskopskärmen räknas och
 multipliceras med vald tidbas eller vertikal förstärkning.
 
-För de faktiska mätningarna användes en hemmabyggd signalgenerator (se
+För de slutgiltiga mätningarna användes en hemmabyggd signalgenerator (se
 Figur~\ref{fig:siggen-schem-1} och Figur~\ref{fig:siggen-schem-2} i
-Sektion~\ref{appendix}).
-\par Signalgeneratorns amplitud ställs till $1 V_{pp}$. Oscilloskopet som aprecision används en \texttt{Flluke 8600A} Multimeter för att mäta amplituden
+Sektion~\ref{appendix}) för att generera insignalen.
+\par Signalgeneratorns amplitud ställs till $1 V_{pp}$. För att få ytterligare
+mätdata används en \texttt{Flluke 8600A} Multimeter för att mäta amplituden
 som då utrycks i RMS. Sambandet mellan ``topp-till-topp''-värdet och RMS-värdet
 utrycks i ekv.~\eqref{eq:amp-rms}:
 
@@ -68,6 +68,7 @@ utrycks i ekv.~\eqref{eq:amp-rms}:
   \end{split}
 \end{equation}
 
+Signalgeneratorns frekvens uppmättes med en \texttt{UNI-T UT61D} multimeter.
 
 
 \subsection{Beräkning}
@@ -103,8 +104,56 @@ med \SI{20}{\dB} per dekad (frekvenshöjning med en faktor av 10).
 \end{equation}
 
 
+\subsection{Genomförande}
+% ------------------------------------------------------------------------------
+Genomförandet av mätningar ses i Figur~\ref{fig:bode-foto-1000}.
+
+\begin{figure}\label{fig:bode-foto-1000}
+  \centering
+  \includegraphics[width=\linewidth]{img/bode_1000Hz.jpg}
+  \caption[] {Mätningar av data presenterade i Tabell~\ref{table-bode}.
+              Signalfrekvens \SI{1}{\kHz}}.
+\end{figure}
+
+\begin{figure}\label{fig:bode-foto-1300}
+  \centering
+  \includegraphics[width=\linewidth]{img/bode_1300Hz.jpg}
+  \caption[] {Mätningar av data presenterade i Tabell~\ref{table-bode}.
+              Signalfrekvens \SI{1.3}{\kHz}}.
+\end{figure}
+
+\begin{figure}\label{fig:bode-foto-1500}
+  \centering
+  \includegraphics[width=\linewidth]{img/bode_1500Hz.jpg}
+  \caption[] {Mätningar av data presenterade i Tabell~\ref{table-bode}.
+              Signalfrekvens \SI{1.5}{\kHz}}.
+\end{figure}
+
+\begin{figure}\label{fig:bode-foto-1800}
+  \centering
+  \includegraphics[width=\linewidth]{img/bode_1800Hz.jpg}
+  \caption[] {Mätningar av data presenterade i Tabell~\ref{table-bode}.
+              Signalfrekvens \SI{1.8}{\kHz}}.
+\end{figure}
+
+\begin{figure}\label{fig:bode-foto-1900}
+  \centering
+  \includegraphics[width=\linewidth]{img/bode_1900Hz.jpg}
+  \caption[] {Mätningar av data presenterade i Tabell~\ref{table-bode}.
+              Signalfrekvens \SI{1.9}{\kHz}}.
+\end{figure}
+
+\begin{figure}\label{fig:bode-foto-2000}
+  \centering
+  \includegraphics[width=\linewidth]{img/bode_2000Hz.jpg}
+  \caption[] {Mätningar av data presenterade i Tabell~\ref{table-bode}.
+              Signalfrekvens \SI{2}{\kHz}}.
+\end{figure}
+
+
 \subsection{Mätresultat}
 % ------------------------------------------------------------------------------
+Mätresultaten presenteras i Tabell~\ref{table-bode}.
 
 \begin{longtable}[c]{@{}ccccc@{}}
   \toprule\addlinespace
@@ -132,7 +181,7 @@ med \SI{20}{\dB} per dekad (frekvenshöjning med en faktor av 10).
   \bottomrule
   \addlinespace
   \caption[]{Mätresultat för kretsen i Figur~\ref{fig:rc-schema}.}
-  \label{bode-table}
+  \label{table-bode}
 \end{longtable}
 
 
@@ -171,6 +220,10 @@ Figur~\ref{fig:bode-sim-param}.
 
 \subsection{Kommentar}\label{}
 % ------------------------------------------------------------------------------
-% TODO:
-
+Mätresultaten ligger inom vad som kan antas vara rimligt för den använda
+experimentuppställningen, komponenttoleranserna och mätutrustningens precision.
+Den största förändringen sker inom ett begränsat frekvensområde vid och efter
+brytfrekvensen. Med ett automatiserat test, med hjälp av programvara som t.ex.
+\texttt{Labview} är det mer praktiskt genomförbart att göra utföra mätningar
+med större precision och ett mycket större antal mätpunkter.
 
